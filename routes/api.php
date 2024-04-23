@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HeartbeatController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,10 +20,14 @@ Route::prefix('v1')->group(function () {
 
     Route::get('Heartbeat', [HeartbeatController::class, 'Heartbeat']);
 
-    Route::get('/example', function () {
-        return response()->json(['message' => 'This is an example API route'], 200);
-    });
+    Route::post('register', [UserController::class, 'register']);
+    Route::post('login', [UserController::class, 'login']);
 
+    
     Route::group(['middleware' => ['auth:sanctum']], function () {
     });
+    
+    // Route::get('/example', function () {
+    //     return response()->json(['message' => 'This is an example API route'], 200);
+    // });
 });

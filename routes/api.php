@@ -27,7 +27,7 @@ Route::prefix('v1')->group(function () {
     Route::prefix('irrigationMonitor')->group(function () {
         Route::get('/', [IrrigationMonitorController::class, 'index']);
         Route::get('{id}', [IrrigationMonitorController::class, 'getById']);
-        Route::post('create/{temp}{ec}{ppm}{ph}', [IrrigationMonitorController::class, 'create']);
+        Route::post('create/{temp}/{ec}/{ppm}/{ph}', [IrrigationMonitorController::class, 'create']);
     });
     
     Route::group(['middleware' => ['auth:sanctum']], function () {

@@ -10,7 +10,7 @@ class IrrigationMonitorRepository implements IIrrigationMonitorRepository
 {
     function getAll()
     {
-        $irrigationMonitor = IrrigationMonitor::get();
+        $irrigationMonitor = IrrigationMonitor::orderBy('id', 'desc')->get();
         return $irrigationMonitor;
     }
 

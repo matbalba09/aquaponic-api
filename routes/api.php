@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\HeartbeatController;
 use App\Http\Controllers\IrrigationMonitorController;
+use App\Http\Controllers\LogController;
 use App\Http\Controllers\UserController;
+use App\Models\Log;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,6 +35,12 @@ Route::prefix('v1')->group(function () {
         Route::get('get/ec', [IrrigationMonitorController::class, 'getAllEc']);
         Route::get('get/ppm', [IrrigationMonitorController::class, 'getAllPpm']);
         Route::get('get/ph', [IrrigationMonitorController::class, 'getAllPh']);
+    });
+
+    Route::prefix('log')->group(function () {
+        Route::get('/', [LogController::class, 'index']);
+        Route::get('{id}', [LogController::class, 'getById']);
+        Route::post('create/{device}/{status}', [LogController::class, 'create']);
     });
     
     Route::group(['middleware' => ['auth:sanctum']], function () {

@@ -52,4 +52,8 @@ class Response
     const SUCCESSFULLY_GET_ALL_EC = 'Successfully get all ec';
     const SUCCESSFULLY_GET_ALL_PPM = 'Successfully get all ppm';
     const SUCCESSFULLY_GET_ALL_PH = 'Successfully get all ph';
+
+    const SUCCESSFULLY_GET_ALL_LOGS = 'Successfully get all logs';
+    const SUCCESSFULLY_GET_LOG = 'Successfully get log';
+    const SUCCESSFULLY_CREATED_LOG = 'Successfully created log';
 }

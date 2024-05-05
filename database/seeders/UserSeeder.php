@@ -18,9 +18,9 @@ class UserSeeder extends Seeder
         User::truncate();
         User::insert([
             [
-                'username' => 'sample01',
-                'email' => 'sample01@gmail.com',
-                'password' => Hash::make('password01'),
+                'username' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('admin'),
                 'created_at' => Helper::getDateNow(),
                 'updated_at' => Helper::getDateNow(),
             ],

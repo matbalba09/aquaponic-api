@@ -31,4 +31,28 @@ class IrrigationMonitorRepository implements IIrrigationMonitorRepository
 
         return $irrigationMonitor;
     }
+
+    function getAllTemp()
+    {
+        $temp = IrrigationMonitor::select('temp')->get();
+        return $temp;
+    }
+
+    function getAllEc()
+    {
+        $ec = IrrigationMonitor::select('ec')->get();
+        return $ec;
+    }
+
+    function getAllPpm()
+    {
+        $ppm = IrrigationMonitor::select('ppm')->get();
+        return $ppm;
+    }
+
+    function getAllPh()
+    {
+        $ph = IrrigationMonitor::select('ph')->get();
+        return $ph;
+    }
 }

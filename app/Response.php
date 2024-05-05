@@ -47,4 +47,9 @@ class Response
     const SUCCESSFULLY_CREATED_IRRIGATION_DATA = 'Successfully created irrigation data';
     const SUCCESSFULLY_UPDATED_IRRIGATION_DATA = 'Successfully updated irrigation data';
     const SUCCESSFULLY_DELETED_IRRIGATION_DATA = 'Successfully deleted irrigation data';
+
+    const SUCCESSFULLY_GET_ALL_TEMP = 'Successfully get all temp';
+    const SUCCESSFULLY_GET_ALL_EC = 'Successfully get all ec';
+    const SUCCESSFULLY_GET_ALL_PPM = 'Successfully get all ppm';
+    const SUCCESSFULLY_GET_ALL_PH = 'Successfully get all ph';
 }

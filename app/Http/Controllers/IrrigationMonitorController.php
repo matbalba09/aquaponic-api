@@ -59,4 +59,65 @@ class IrrigationMonitorController extends Controller
 
         return response()->json($response, $response['code']);
     }
+
+
+    public function getAllTemp()
+    {
+        $temp = $this->irrigationMonitorRepository->getAllTemp();
+
+        $response = [
+            'code' => Response::HTTP_SUCCESS,
+            'status' => Response::SUCCESS,
+            'message' => Response::SUCCESSFULLY_GET_ALL_TEMP,
+            'count' => IrrigationMonitor::count(),
+            'data' => $temp,
+        ];
+
+        return response()->json($response, $response['code']);
+    }
+
+    public function getAllEc()
+    {
+        $ec = $this->irrigationMonitorRepository->getAllEc();
+
+        $response = [
+            'code' => Response::HTTP_SUCCESS,
+            'status' => Response::SUCCESS,
+            'message' => Response::SUCCESSFULLY_GET_ALL_EC,
+            'count' => IrrigationMonitor::count(),
+            'data' => $ec,
+        ];
+
+        return response()->json($response, $response['code']);
+    }
+
+    public function getAllPpm()
+    {
+        $ppm = $this->irrigationMonitorRepository->getAllPpm();
+
+        $response = [
+            'code' => Response::HTTP_SUCCESS,
+            'status' => Response::SUCCESS,
+            'message' => Response::SUCCESSFULLY_GET_ALL_PPM,
+            'count' => IrrigationMonitor::count(),
+            'data' => $ppm,
+        ];
+
+        return response()->json($response, $response['code']);
+    }
+
+    public function getAllPh()
+    {
+        $ph = $this->irrigationMonitorRepository->getAllPh();
+
+        $response = [
+            'code' => Response::HTTP_SUCCESS,
+            'status' => Response::SUCCESS,
+            'message' => Response::SUCCESSFULLY_GET_ALL_PH,
+            'count' => IrrigationMonitor::count(),
+            'data' => $ph,
+        ];
+
+        return response()->json($response, $response['code']);
+    }
 }

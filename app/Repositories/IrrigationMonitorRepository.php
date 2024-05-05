@@ -34,25 +34,25 @@ class IrrigationMonitorRepository implements IIrrigationMonitorRepository
 
     function getAllTemp()
     {
-        $temp = IrrigationMonitor::select('temp')->get();
+        $temp = IrrigationMonitor::select('temp')->orderBy('id', 'desc')->get();
         return $temp;
     }
 
     function getAllEc()
     {
-        $ec = IrrigationMonitor::select('ec')->get();
+        $ec = IrrigationMonitor::select('ec')->orderBy('id', 'desc')->get();
         return $ec;
     }
 
     function getAllPpm()
     {
-        $ppm = IrrigationMonitor::select('ppm')->get();
+        $ppm = IrrigationMonitor::select('ppm')->orderBy('id', 'desc')->get();
         return $ppm;
     }
 
     function getAllPh()
     {
-        $ph = IrrigationMonitor::select('ph')->get();
+        $ph = IrrigationMonitor::select('ph')->orderBy('id', 'desc')->get();
         return $ph;
     }
 }

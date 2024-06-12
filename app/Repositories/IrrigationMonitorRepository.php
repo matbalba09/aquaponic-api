@@ -10,7 +10,7 @@ class IrrigationMonitorRepository implements IIrrigationMonitorRepository
 {
     function getAll()
     {
-        $irrigationMonitor = IrrigationMonitor::orderBy('id', 'desc')->get();
+        $irrigationMonitor = IrrigationMonitor::orderBy('id', 'desc')->limit(10000)->get();
         return $irrigationMonitor;
     }
 
@@ -34,25 +34,25 @@ class IrrigationMonitorRepository implements IIrrigationMonitorRepository
 
     function getAllTemp()
     {
-        $temp = IrrigationMonitor::select('temp')->orderBy('id', 'desc')->get();
+        $temp = IrrigationMonitor::select('temp')->orderBy('id', 'desc')->limit(10000)->get();
         return $temp;
     }
 
     function getAllEc()
     {
-        $ec = IrrigationMonitor::select('ec')->orderBy('id', 'desc')->get();
+        $ec = IrrigationMonitor::select('ec')->orderBy('id', 'desc')->limit(10000)->get();
         return $ec;
     }
 
     function getAllPpm()
     {
-        $ppm = IrrigationMonitor::select('ppm')->orderBy('id', 'desc')->get();
+        $ppm = IrrigationMonitor::select('ppm')->orderBy('id', 'desc')->limit(10000)->get();
         return $ppm;
     }
 
     function getAllPh()
     {
-        $ph = IrrigationMonitor::select('ph')->orderBy('id', 'desc')->get();
+        $ph = IrrigationMonitor::select('ph')->orderBy('id', 'desc')->limit(10000)->get();
         return $ph;
     }
 }
